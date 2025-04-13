@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Fehérvár FC</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+
 </head>
 <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
@@ -14,7 +15,7 @@
       <div class="container-fluid">
         <a class="navbar-brand" href="index.html">
           <img src="Pictures/Fehérvár_FC_logo.png" style="margin-left: 0.5em;" alt="Logo" width="45" height="60" class="d-inline-block align-text-middle">
-          Fehérvár FC
+          Veled az úton
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -41,13 +42,77 @@
             </li>
             <li class="mx-2 text-muted">|</li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="press.html">Sajtó/Press</a>
+              <a class="nav-link active" aria-current="page" href="press.html">Meccsjegyfoglalás</a>
             </li>
             
           </ul>
         </div>
       </div>
     </nav>
+    <div class="container text-white mt-3">
+      <h1 class="mb-4 text-center">Jegyfoglalási információk</h1>
+      <h5>Szeretnéd biztosítani a helyed a Fehérvár FC következő hazai mérkőzésére?</h5>
+      <p>
+        
+        A jegyfoglalási lehetőség azok számára nyújt előnyt, akik előre szeretnék bebiztosítani magukat, és nem szeretnének kockáztatni az utolsó pillanatban történő vásárlással. 
+        Foglalásoddal garantáljuk, hogy a kért jegyek rendelkezésedre állnak akkor is, ha a jegyek időközben elfogynak a pénztárakból vagy online felületekről.</p>
+        <p><strong>A foglalást követően emailben kapsz részletes tájékoztatást arról, hogy hol és mikor veheted át a jegyeket, valamint a fizetés módjáról. </strong>
+        A jegyek átvétele <strong>készpénzzel vagy bankkártyával</strong> lehetséges, az átvétel helyszínén. </p>
+        <p>
+        Kérjük, hogy csak akkor foglalj, ha valóban el tudsz jönni a megjelölt időpontban, mivel a jegyeket más számára nem tudjuk továbbadni.<br>
+        <strong>Fontos: a foglalt jegyek névre szólnak, nem ruházhatók át más személyre, és nem értékesíthetők tovább. Egy fő egyszerre maximum csak 10 jegyet foglalhat le!</strong> </p>
+        <p>A cél, hogy valóban azokhoz kerüljenek a belépők, akik szeretnének szurkolni a csapatnak a stadionban.<br>
+          <strong>Töltsd ki az alábbi űrlapot, válaszd ki a szektort, add meg a kívánt jegyszámot, és biztosítsd be a helyed időben!</strong>
+      </p>
+      <h5>Veled az úton – hajrá Fehérvár!</h5>
+    </div>
 
+<div class="container text-white">
+  <h2 class="mb-4 text-center">Meccsjegyfoglalás</h2>
+  
+  <form id="ticketForm">
+    <div class="mb-3">
+      <label class="form-label">Foglaló Neve</label>
+      <input type="text" class="form-control" id="name" required>
+    </div>
+    
+    <div class="mb-3">
+      <label for="email" class="form-label">E-mail</label>
+      <input type="email" class="form-control" id="email" required>
+    </div>
+    <div class="mb-3">
+      <label for="match" class="form-label">Válassz mérkőzést</label>
+      <select class="form-select" id="match">
+        <option selected>Válassz...</option>
+        <option value="1">2025.04.20 | Fehérvár FC – MTK Budapest</option>
+        <option value="2">2025.05.04 | Fehérvár FC – Paks</option>
+        <option value="3">2025.05.24 | Fehérvár FC – Debrecen</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label for="sector" class="form-label">Szektor</label>
+      <select class="form-select" id="sector" required>
+        <option selected>Válassz szektort...</option>
+        <option value="A">A szektor (2000 FT)</option>
+        <option value="B">B szektor (2500 FT)</option>
+        <option value="C">C szektor (3000 FT)</option>
+        <option value="VIP">VIP szektor (25000 FT)</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label for="quantity" class="form-label">Jegyek száma</label>
+      <input type="number" class="form-control" id="quantity" min="1" max="10" value="1">
+    </div>
+    <div class="mb-3">
+      <label for="price" class="form-label">Végösszeg</label>
+      <input type="text" class="form-control" id="price" disabled>
+    </div>
+    
+    <button type="submit">Foglalás</button>
+  </form>
+  <p id="error" style="color:red;"></p>
+</div>
+
+    <script src="script.js"></script>
 </body>
 </html>
